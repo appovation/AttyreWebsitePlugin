@@ -14,7 +14,7 @@ ShopifyApp.configure do |config|
   config.webhooks = [
     {
       topic: 'orders/create',
-      address: 'https://d282b241a6fa.ngrok.io/orders_create',
+      address: "#{ENV['APP_URL']}/orders_create",
       format: 'json'
     }
   ]
