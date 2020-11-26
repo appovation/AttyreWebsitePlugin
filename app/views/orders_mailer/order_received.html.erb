@@ -325,7 +325,7 @@
     }
 
 </style>
-<span class="preheader">A new Order has been placed.</span>
+<span class="preheader">You received a new order! [<%= @order.order_number %>]</span>
 <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
   <tr>
     <td>&nbsp;</td>
@@ -341,60 +341,31 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <p>Hi there,</p>
-                    <p>A new order is placed on Store <%=@order.shop.shopify_domain %> following are the details</p>
-                    <br>
+                    <div style="text-align: center; margin-top: 50px">
+                      <a href="https://www.attyredelivery.com/" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="box-sizing:border-box; color:#348eda; font-weight:400; text-decoration:none">
+                        <img src="https://attyre-delivery.herokuapp.com/attyre_logo.jpg" alt="Image" style="max-width:100%; border-style:none; height:150px; width:250px">
+                      </a>
+                    </div>
+                    <h2 style="margin-top: 50px; margin-bottom: 5px">You received a new order! [<%= @order.order_number %>]</h2>
+                    <a href="https://www.<%= @order.shop.shopify_domain %>" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="box-sizing:border-box; color:#348eda; font-weight:400; text-decoration:none; margin-bottom: 5px">
+                      <%= @order.shop.shopify_domain %>
+                    </a>
 
-                    <div>
-                      <h3> Shop Domain:  <%= @order.shop.shopify_domain %></h3>
+                    <h3 style="margin-top: 10px">New T Shirt With samll size!</h3>
+
+                    <div style="margin-top: 50px">
+                      <h3 style="display: inline-block; font-weight: bold"> Delivery address:</h3>
+                      <h3 style="margin-left: 30%; margin-top: -25px"> <%= @order.first_name %> <%= @order.last_name %> </h3>
+                      <h3 style="margin-left: 30%"> <%= @order.address1 %> </h3>
+                      <h3 style="margin-left: 30%"> <%= @order.address2 %> </h3>
+                      <h3 style="margin-left: 30%"> <%= @order.city %>  <%= @order.province %> <%= @order.country %> <%= @order.zip_code %></h3>
                     </div>
 
-                    <div>
-                      <h3> Order Number:  <%= @order.order_number %></h3>
+                    <div style="margin-top: 50px">
+                      <h3 style="display: inline-block; font-weight: bold"> Contact info: :</h3>
+                      <h3 style="margin-left: 30%; margin-top: -25px"> <%= @order.email %> </h3>
+                      <h3 style="margin-left: 30%"> <%= @order.phone %> </h3>
                     </div>
-
-                    <div>
-                      <h3> User First Name:  <%= @order.first_name %></h3>
-                    </div>
-
-                    <div>
-                      <h3> User Last Name:  <%= @order.last_name %></h3>
-                    </div>
-
-                    <div>
-                      <h3> User Email:  <%= @order.email %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Address1:  <%= @order.address1 %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Address1:  <%= @order.address2 %></h3>
-                    </div>
-
-                    <div>
-                      <h3> City:  <%= @order.city %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Province:  <%= @order.province %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Country:  <%= @order.country %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Zip Code:  <%= @order.zip_code %></h3>
-                    </div>
-
-                    <div>
-                      <h3> Phone:  <%= @order.phone %></h3>
-                    </div>
-
-                    <br>
-                    <p>Good luck!</p>
                   </td>
                 </tr>
               </table>
