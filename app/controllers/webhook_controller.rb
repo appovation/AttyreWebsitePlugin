@@ -29,6 +29,7 @@ class WebhookController < ApplicationController
       province: params[:customer][:default_address][:province],
       country: params[:customer][:default_address][:country],
       zip_code: params[:customer][:default_address][:zip],
+      product_title: params[:line_items][0][:title],
       phone: params[:customer][:default_address][:phone],
       json_data: params.to_json
     }
