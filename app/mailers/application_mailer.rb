@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info.bargainly@gmail.com'
+  default from: 'connect@appovation.co'
   layout 'mailer'
 end
