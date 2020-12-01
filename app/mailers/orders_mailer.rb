@@ -7,6 +7,6 @@ class OrdersMailer < ApplicationMailer
   #
   def order_received(order)
     @order = order
-    mail(to: ['aijaz-khan@hotmail.com', 'connect@appovation.co'], subject: 'Got a new Order')
+    mail(to: ['aijaz-khan@hotmail.com', 'connect@appovation.co'], subject: 'New Order Received')
   end
 end
