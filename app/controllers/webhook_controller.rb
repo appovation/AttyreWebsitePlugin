@@ -4,7 +4,8 @@ class WebhookController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def orders_create
-    if ['Same Day', 'same day', 'SAME DAY'].include? params[:shipping_lines][0][:title]
+    binding.pry
+    if params[:shipping_lines][0][:title]&.downcase.include? 'same day'
       order = Order.new(get_params)
       if order.save
         p 'Order Created'
