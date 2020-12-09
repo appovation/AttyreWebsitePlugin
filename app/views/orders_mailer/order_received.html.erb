@@ -353,15 +353,14 @@
                     <h3 style="margin-top: 10px"><%= @order.product_title %></h3>
 
                     <div style="margin-top: 50px">
-                      <h3 style="display: inline-block; font-weight: bold"> Delivery address:</h3>
-                      <h3 style="margin-left: 30%; margin-top: -25px"> <%= @order.first_name %> <%= @order.last_name %> </h3>
-                      <h3 style="margin-left: 30%"> <%= @order.address1 %> </h3>
-                      <h3 style="margin-left: 30%"> <%= @order.address2 %> </h3>
+                      <h3 style="display: inline-block; font-weight: bold; margin-bottom: 50px"> Delivery address:</h3>
+                      <h3 style="margin-left: 30%"> <%= @order.first_name %> <%= @order.last_name %> </h3>
+                      <h3 style="margin-left: 30%"> <%= @order.address1 %> <%= @order.address2 %>  </h3>
                       <h3 style="margin-left: 30%"> <%= @order.city %>  <%= @order.province %> <%= @order.country %> <%= @order.zip_code %></h3>
                     </div>
 
                     <div style="margin-top: 50px">
-                      <h3 style="display: inline-block; font-weight: bold"> Contact info:</h3>
+                      <h3 style="display: inline-block; font-weight: bold; margin-bottom: 50px"> Contact info:</h3>
                       <h3 style="margin-left: 30%; margin-top: -25px"> <%= @order.email %> </h3>
                       <h3 style="margin-left: 30%"> <%= @order.phone %> </h3>
                     </div>
